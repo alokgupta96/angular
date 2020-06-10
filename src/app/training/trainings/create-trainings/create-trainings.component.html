@@ -1,0 +1,47 @@
+<div class="edit">
+    <div class="d-flex justify-content-between">
+    <h3 mat-dialog-title>Create Training Category</h3>
+    <!-- <button mat-icon-button (click)="onNoClick()">
+        <mat-icon>close</mat-icon>
+      </button> -->
+</div>
+<div mat-dialog-content>
+  <div class="">
+    <mat-form-field appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select>
+          <mat-option>Select Category</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  <div class="">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+  </div>
+  <!-- <div class="">
+    <mat-form-field appearance="outline">
+        <mat-label>Expired In (Month)</mat-label>
+        <input matInput placeholder="Expired Month">
+      </mat-form-field>
+  </div>
+  <div class="">
+    <mat-form-field appearance="outline">
+        <mat-label>Passing Percentage (%)</mat-label>
+        <input matInput placeholder="Passing Percentage">
+      </mat-form-field>
+  </div>
+  <div class="">
+    <mat-form-field appearance="outline">
+        <mat-label>Reattempt day (if unsuccessful)</mat-label>
+        <input matInput placeholder="Reattempt day">
+      </mat-form-field>
+  </div> -->
+</div>
+<div mat-dialog-actions class="float-right">
+  <button mat-raised-button color="primary">Save</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  
+</div>
+</div>

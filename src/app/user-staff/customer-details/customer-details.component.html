@@ -1,0 +1,41 @@
+<div class="audit_category">
+    <div class="pr-8 py-16 h-52" fxLayout="row"
+    fxLayoutAlign="space-between center">
+    <h3>Customers Sites</h3>
+    <!-- <button mat-raised-button color="primary" class="mb-3" routerLink="/customer-create">Create</button> -->
+    </div>
+        <mat-card>
+          <div class="d-flex justify-content-between">
+            <mat-form-field appearance="outline">
+              <mat-label>Search</mat-label>
+              <input matInput (keyup)="onKey($event)" placeholder="Search">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </div>
+            <div class="fuse-widget-front">
+              <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                  <table class="simple">
+  
+                      <thead>
+                        <tr>
+                          <th scope="col">First Name</th>
+                          <th scope="col">Site</th>
+                        </tr>
+                      </thead>
+  
+                      <tbody  *ngIf="customerList.length > 0">
+                        <tr *ngFor="let customer of customerList">
+                          <td>{{customer.customerName}}</td>
+                          <td>{{customer.siteName}}</td>
+                        </tr>
+                      </tbody>
+                      <tbody *ngIf="customerList.length == 0">
+                        <tr>
+                          <td class="text-center">No data found</td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+        </mat-card>
+  </div>

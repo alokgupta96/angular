@@ -1,0 +1,54 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    z-index: 2;
+  }
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  .example-sidenav-container {
+       flex: 1;
+  }
+  .example-is-mobile .example-sidenav-container {
+     flex: 1 0 auto;
+  }
+  .example-toolbar{
+    background: #434242 !important;
+  }
+  
+
+  .mat-expansion-panel:not([class*=mat-elevation-z]){
+    box-shadow: none;
+  }
+  .sub_menu{
+    padding: 0;
+  }
+.sub_menu li{
+  list-style: none;
+  line-height: 30px;
+}
+.sub_menu span{
+  vertical-align: top;
+}
+.mat-toolbar-row, .mat-toolbar-single-row{
+      padding: 0px 0px;
+      flex-direction: unset;
+      align-items: unset;
+      white-space: unset;
+}
+.logo_img{
+  width:210px;
+  background-color: #fff;
+}
+.logo_img img{
+  width: 35%;
+    margin-left: 8px;
+}

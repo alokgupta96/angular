@@ -1,0 +1,94 @@
+<div class="audit">
+  <h2>Edit Training Chapter </h2>
+    <hr>
+    <h3>Trainings: How to prevent coronavirus</h3>  
+   <mat-card>
+    <div class="row pt-16">
+        <div class="col-md-6">
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput placeholder="Title">
+            </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <!-- <mat-form-field appearance="outline">
+                <mat-label>Content</mat-label>
+                <input matInput placeholder="Content">
+            </mat-form-field> -->
+            <p>Content</p>
+            <angular-editor [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+        </div>
+    </div>
+
+    <div class="col-md-6 mt-8">
+      <mat-form-field appearance="outline">
+          <mat-label>Youtube Link</mat-label>
+          <input matInput placeholder="Youtube Link">
+      </mat-form-field>
+  </div>
+             <div class="fuse-widget-front">
+
+                <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                    <table class="simple">
+    
+                        <thead>
+                          <tr>
+                            <th scope="col">Doc</th>
+                            <th scope="col">View</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+    
+                        <tbody>
+                          <tr>
+                            <td>apple.png</td>
+                            <td>
+                                <button mat-icon-button color="primary" routerLink="/">
+                                    <mat-icon>get_app</mat-icon>
+                                  </button>
+                            </td>
+                            <td>
+                                <button mat-icon-button color="warn" routerLink="/">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>apple.png</td>
+                              <td>
+                                  <button mat-icon-button color="primary" routerLink="/">
+                                      <mat-icon>get_app</mat-icon>
+                                    </button>
+                              </td>
+                              <td>
+                                <button mat-icon-button color="warn" routerLink="/">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>apple.png</td>
+                              <td>
+                                <button mat-icon-button color="primary" routerLink="/">
+                                    <mat-icon>get_app</mat-icon>
+                                  </button>
+                              </td>
+                              <td>
+                                <button mat-icon-button color="warn" routerLink="/">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                              </td>
+                            </tr>
+              
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-12 mt-8 pb-8">
+                <button mat-raised-button color="primary" routerLink="/">Save</button> &nbsp;&nbsp;
+                <button mat-raised-button routerLink="/">Cancel</button>
+            </div>
+             </div>
+        </mat-card>
+        </div>

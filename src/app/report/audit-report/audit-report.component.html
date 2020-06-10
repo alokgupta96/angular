@@ -1,0 +1,153 @@
+<div class="audit_category">
+    <div class="d-flex justify-content-between">
+    <h3>Audit Report</h3>
+    </div>
+        <mat-card>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Site</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Site</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Customer</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Customer</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Submitted by staff</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Submitted by staff</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Frequency</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Frequency</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Selecte Status</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Status</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Form</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Form</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Frequency</mat-label>
+                <mat-select>
+                  <mat-option value="option">Daily</mat-option>
+                  <mat-option value="option">Week</mat-option>
+                  <mat-option value="option">Month</mat-option>
+                  <mat-option value="option">Year</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <button mat-raised-button color="primary">Reset</button>
+            </div>
+          </div>
+
+          <div class="fuse-widget-front">
+
+            <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                <table class="simple">
+
+                    <thead>
+                      <tr>
+                        <th scope="col">Scheduled</th>
+                        <th scope="col">Form</th>
+                        <th scope="col">Site</th>
+                        <th scope="col">Customer</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Submitted by</th>
+                        <th scope="col">Submitted Date</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>10-05-2020 to 13-05-2020</td>
+                        <td>CHW site audit (USA001)</td>
+                        <td>CMW NSW Eastwood Security </td>
+                        <td>mason shri</td>
+                        <td>Weekly</td>
+                        <td>Danity</td>
+                        <td>13-05-2020</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/view-audit-report">
+                                <mat-icon>remove_red_eye</mat-icon>
+                              </button>
+                              <button mat-icon-button color="primary">
+                                <mat-icon>adjust</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10-05-2020 to 13-05-2020</td>
+                        <td>CHW site audit (USA001)</td>
+                        <td>CMW NSW Eastwood Security </td>
+                        <td>mason shri</td>
+                        <td>Weekly</td>
+                        <td>Danity</td>
+                        <td>13-05-2020</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>
+                          <button mat-icon-button color="primary"  routerLink="/view-audit-report">
+                            <mat-icon>remove_red_eye</mat-icon>
+                          </button>
+                          <button mat-icon-button color="primary">
+                            <mat-icon>adjust</mat-icon>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>10-05-2020 to 13-05-2020</td>
+                        <td>CHW site audit (USA001)</td>
+                        <td>CMW NSW Eastwood Security </td>
+                        <td>mason shri</td>
+                        <td>Weekly</td>
+                        <td>Danity</td>
+                        <td>13-05-2020</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>
+                          <button mat-icon-button color="primary" routerLink="/view-audit-report">
+                            <mat-icon>remove_red_eye</mat-icon>
+                          </button>
+                          <button mat-icon-button color="primary">
+                            <mat-icon>adjust</mat-icon>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        </mat-card>
+  </div>

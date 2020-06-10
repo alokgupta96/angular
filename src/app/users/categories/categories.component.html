@@ -1,0 +1,75 @@
+<div class="audit_category">
+    <div class="pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Audit Categories</h3>
+    <button mat-raised-button color="primary" class="mb-3" (click)="openEditDialog()">Create Category</button>
+    </div>
+        <mat-card>
+            <div class="">
+              <mat-form-field appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+              
+              <div class="fuse-widget-front">
+
+                <div class="simple-table-container overflow-auto" ms-responsive-table>
+                    <table class="simple">
+    
+                        <thead>
+                          <tr>
+                            <th colspan="4">Name</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Modify Date</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+    
+                        <tbody>
+                          <tr>
+                            <td colspan="4">Mobile App</td>
+                            <td><button mat-raised-button color="primary">Enable</button></td>
+                            <td>29 may 2020</td>
+                            <td>
+                              <button mat-icon-button color="primary" (click)="openEditDialog()">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">WHS</td>
+                            <td><button mat-raised-button color="primary">Enable</button></td>
+                            <td>29 may 2020</td>
+                            <td>
+                              <button mat-icon-button color="primary" (click)="openEditDialog()">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4">systems</td>
+                            <td><button mat-raised-button color="primary">Enable</button></td>
+                            <td>29 may 2020</td>
+                            <td>
+                              <button mat-icon-button color="primary" (click)="openEditDialog()">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+              </div>
+           </mat-card>
+</div>

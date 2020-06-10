@@ -1,0 +1,96 @@
+@import "src/@fuse/scss/fuse";
+.dash{
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+.mat-form-field{
+    width: 47%;
+    margin: 15px;
+}
+.card_field{
+    margin: 15px;
+}
+.width-50{
+    width:47%;
+    float:left;
+    margin: 15px;
+}
+.dashboard{
+    width:100%;
+    padding:20px;
+}
+.table{
+    width:100%;
+    border-collapse: collapse;
+}
+.table tr th{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 15px;
+    background-color: #f1f1f196;
+}
+.table tr td{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 15px;
+}
+
+#dashboard-analytics {
+
+    .main-widget {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        display: flex;
+        flex: 1 1 auto;
+        padding: 32px;
+        min-width: 0;
+
+        @include media-breakpoint('lt-lg') {
+            flex-direction: column;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-width: 0;
+
+            .widget {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex: 0 0 auto;
+            width: 320px;
+            min-width: 320px;
+            max-width: 320px;
+
+            @include media-breakpoint('lt-lg') {
+                flex: 1 0 100%;
+                margin-top: 32px;
+                width: 100%;
+                min-width: 0;
+                max-width: none;
+            }
+
+            .fuse-card {
+
+                @include media-breakpoint('lt-lg') {
+                    width: 100%;
+                    min-width: 0;
+                    max-width: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+// form css
+

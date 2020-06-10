@@ -1,0 +1,106 @@
+<div class="audit_category">
+    <div class="pr-8 py-16 h-52" fxLayout="row"
+    fxLayoutAlign="space-between center">
+    <h3>Trainings</h3>
+    <button mat-raised-button color="primary" class="mb-3" (click)="openCreateDialog()">Create</button>
+    </div>
+        <mat-card>
+            <div class="d-flex justify-content-between">
+              <mat-form-field appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+            </div>
+            <div class="fuse-widget-front">
+
+              <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                  <table class="simple">
+  
+                      <thead>
+                        <tr>
+                          <th colspan="4">Name</th>
+                          <th colspan="4">Category</th>
+                          <!-- <th colspan="4">Validty</th> -->
+                          <!-- <th colspan="4">Passing(%)</th>
+                          <th colspan="4">Reattempt</th> -->
+                          <th colspan="4">status</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+  
+                      <tbody>
+                        <tr>
+                          <td colspan="4">Today</td>
+                          <td colspan="4">Enviroment</td>
+                          <!-- <td colspan="4">1 Month</td> -->
+                          <!-- <td colspan="4">80%</td>
+                          <td colspan="4">1 Day</td> -->
+                          <td colspan="4">Active</td>
+                          <td>
+                            <button mat-icon-button color="primary" routerLink="/training-chapter">
+                              <mat-icon>library_books</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" routerLink="/training-question">
+                              <mat-icon>contact_support</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" (click)="openCreateDialog()">
+                              <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                              <mat-icon>delete</mat-icon>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">Today</td>
+                          <td colspan="4">Enviroment</td>
+                          <!-- <td colspan="4">1 Month</td> -->
+                          <!-- <td colspan="4">80%</td>
+                          <td colspan="4">1 Day</td> -->
+                          <td colspan="4">Active</td>
+                          <td>
+                            <button mat-icon-button color="primary" routerLink="/training-chapter">
+                              <mat-icon>library_books</mat-icon>
+                            </button>
+                             <button mat-icon-button color="primary" routerLink="/training-question">
+                              <mat-icon>contact_support</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" (click)="openCreateDialog()">
+                                  <mat-icon>edit</mat-icon>
+                                </button>
+                                <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                  <mat-icon>delete</mat-icon>
+                                </button>
+                              
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4">Today</td>
+                          <td colspan="4">Enviroment</td>
+                          <!-- <td colspan="4">1 Month</td> -->
+                          <!-- <td colspan="4">80%</td>
+                          <td colspan="4">1 Day</td> -->
+                          <td colspan="4">Active</td>
+                          <td>
+                            <button mat-icon-button color="primary" routerLink="/training-chapter">
+                              <mat-icon>library_books</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" routerLink="/training-question">
+                              <mat-icon>contact_support</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" (click)="openCreateDialog()">
+                              <mat-icon>edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                              <mat-icon>delete</mat-icon>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+  
+          </div>
+        </mat-card>
+</div>

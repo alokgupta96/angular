@@ -1,0 +1,143 @@
+<div class="audit_category">
+    <div class="d-flex justify-content-between">
+    <h3>Audit Forms</h3>
+    </div>
+        <mat-card>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Site</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Site</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Customer</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Customer</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Submitted by staff</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Submitted by staff</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="widget" fxLayout="column"
+            fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Frequency</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Frequency</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Selcte Status</mat-label>
+                <mat-select>
+                  <mat-option value="option">Selcte Status</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+                <button mat-raised-button color="primary">Reset</button>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+            </div>
+            <div class="dash_table text-right"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <button mat-raised-button color="primary" routerLink="/audit-form">Create</button>
+            </div>
+          </div>
+          <div class="fuse-widget-front">
+            <p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000">
+            </p-confirmDialog>
+            <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                <table class="simple">
+
+                    <thead>
+                      <tr>
+                        <th scope="col">Form No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Modify Date</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody  *ngIf="auditList.length > 0">
+                      <tr  *ngFor="let audit of auditList">
+                        <td>{{audit.formNumber}}</td>
+                        <td>{{audit.formName}}</td>
+                        <td>{{audit.frequency}}</td>
+                        <td>{{audit.category}}</td>
+                        <td><span class="bg-primary">Enable</span></td> 
+                        <td>{{convertDate(audit.date)}}</td>
+                        <td>
+                            <button mat-icon-button color="primary" (click)="auditFormEdit(audit)">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteAuditForm(audit)">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                      <!-- <tr>
+                        <td>USA001</td>
+                        <td>CHW site audit </td>
+                        <td>Weekly</td>
+                        <td>Cleaning inspection</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>13-05-2020</td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/audit-form">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USA001</td>
+                        <td>CHW site audit </td>
+                        <td>Weekly</td>
+                        <td>Cleaning inspection</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>13-05-2020</td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/audit-form">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="openDeleteDialog()">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr> -->
+                    </tbody>
+                    <tbody *ngIf="auditList.length == 0">
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>No data found</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        </mat-card>
+  </div>

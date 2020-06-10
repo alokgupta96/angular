@@ -1,0 +1,65 @@
+@import "@fuse/scss/core";
+@import "app/app.theme";
+body.theme-default .mat-flat-button.mat-accent, body.theme-default .mat-raised-button.mat-accent, body.theme-default .mat-fab.mat-accent, body.theme-default .mat-mini-fab.mat-accent {
+    background: #DBB042 !important;
+}
+body.theme-default .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color:#DBB042 !important;
+}
+body.theme-default .mat-radio-button.mat-accent .mat-radio-inner-circle, body.theme-default .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), body.theme-default .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, body.theme-default .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+    background-color: #DBB042 !important;
+}
+body.theme-default .accent {
+    background-color: #DBB042 !important;
+    color: white !important;
+}
+.no_data{
+    height: 400px;
+    text-align: center;
+}
+.no_data p{
+    width: 122px;
+    /* height: 100px; */
+    display: inline-block;
+    margin: 20% auto;
+}
+.ui-button-icon-only .ui-button-icon-left, .ui-button-text-icon-left .ui-button-icon-left, .ui-button-text-icon-right .ui-button-icon-right{
+    display: none;
+}
+.ui-button.ui-button-text-icon-left .ui-button-text{
+    text-align: center;
+    padding: 5px 22px !important;
+    border: none;
+}
+.ui-confirmdialog-acceptbutton span.ui-button-text.ui-clickable {
+    background: #DBB042 !important;
+    border: none;
+    background: none;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.padd-top .mat-form-field-appearance-outline .mat-form-field-infix{
+    padding: 0 0 12px !important;
+}
+.ui-button{
+    border:none !important;
+}
+.ui-confirmdialog-rejectbutton span.ui-button-text.ui-clickable{
+    border: none;
+    background: none;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    color: #000;
+}
+.angular-editor-toolbar .angular-editor-toolbar-set .angular-editor-button{
+    font-size: 13px !important;
+}
+.ae-font .ae-picker-label{
+    font-size: 13px !important;
+}
+.mat-pseudo-checkbox-checked::after {
+    top: 1px !important;
+}
+.mat-pseudo-checkbox-checked:after {
+    width: 9px !important;
+    height: 4px !important;
+}

@@ -1,0 +1,28 @@
+.audit_category{
+    width:100%;
+    float:left;
+    padding: 20px;
+}
+.bg-primary{
+    background-color: #DBB042 !important;
+}
+.bg-disable{
+    background-color: #ddd !important;
+    color:#888;
+}
+span{
+    background: #434242;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 3px;
+}
+.enable_disbale_btn {
+    cursor: pointer;
+}
+.width-25{
+    width:25%;
+}
+.overflow-auto{
+    overflow: auto;
+    border: 1px solid #ddd;
+}

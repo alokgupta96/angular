@@ -1,0 +1,55 @@
+<div class="audit_category">
+    <div class=" pr-8 py-16 h-52" fxLayout="row"
+    fxLayoutAlign="space-between center">
+    <h3>Departments</h3>
+    <button mat-raised-button color="primary" class="mb-3" routerLink="/department-create">Create</button>
+    </div>
+        <mat-card>
+            <div class="d-flex justify-content-between">
+              <mat-form-field appearance="outline">
+                <mat-label>Search</mat-label>
+                <input matInput (keyup)="onKey($event)" placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+              </mat-form-field>
+            </div>
+            <div class="fuse-widget-front">
+              <p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000"></p-confirmDialog>
+              <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                  <table class="simple">
+  
+                      <thead>
+                        <tr>
+                          <th colspan="4">Name</th>
+                          <th scope="col">Modified</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+  
+                      <tbody *ngIf="departmentList.length > 0">
+                        <tr *ngFor="let department of departmentList">
+                          <td colspan="4">{{department.departmentName}}</td>
+                          <td>{{convertDate(department.createdAt)}}</td>
+                          <td>
+                              <button mat-icon-button color="primary" (click)="departmentEdit(department)">
+                                  <mat-icon>edit</mat-icon>
+                                </button>
+                                <button mat-icon-button color="warn" (click)="openDeleteDepartment(department)">
+                                  <mat-icon>delete</mat-icon>
+                                </button>
+                          </td>
+                        </tr>
+            
+                      </tbody>
+                      <tbody *ngIf="departmentList.length == 0">
+                        <tr>
+                          <td colspan="4"></td>
+                          <td>No data found</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+  
+          </div>
+        </mat-card>
+</div>

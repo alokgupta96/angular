@@ -1,0 +1,44 @@
+.audit{
+    width:100%;
+    float:left;
+    padding: 10px 20px;
+}
+.bg-primary{
+    background-color: #DBB042 !important;
+}
+span{
+    background: #434242;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 3px;
+}
+.width-25{
+    width:25%;
+}
+.overflow-auto{
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+table.simple thead tr th{
+    border-bottom:none !important;
+}
+table.simple tbody tr td{
+    border-bottom:none !important;
+}
+.mat-form-field{
+    width: 100%;
+}
+.html-header {
+    margin: 15px 0 5px;
+  }
+  
+  .html {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    min-height: 20px;
+    max-height: 10rem;
+    overflow: auto;
+  }
+  

@@ -1,0 +1,21 @@
+.audit{
+    width:100%;
+    float:left;
+    padding: 20px;
+}
+.mat-form-field{
+    width: 100%;
+    /* margin-bottom: 15px; */
+}
+.drag_input{
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 20px;
+    background: #f1f1f1;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+

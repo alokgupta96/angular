@@ -1,0 +1,139 @@
+<div class="audit_category">
+    <div class="d-flex justify-content-between">
+    <h3>Incident Forms</h3>
+    </div>
+        <mat-card>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Site</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Site</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Customer</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Customer</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Submitted by staff</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Submitted by staff</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <!-- <div class="widget" fxLayout="column"
+            fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+              <mat-form-field appearance="outline">
+                <mat-label>Select Frequency</mat-label>
+                <mat-select>
+                  <mat-option value="option">Select Frequency</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div> -->
+          </div>
+          <div fxLayout="row wrap">
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+              <mat-form-field appearance="outline">
+                <mat-label>Selcte Status</mat-label>
+                <mat-select>
+                  <mat-option value="option">Selcte Status</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+                <button mat-raised-button color="primary">Reset</button>
+            </div>
+            <!-- <div class="dash_table"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+            </div> -->
+            <div class="dash_table text-right"  fxFlex="100" fxFlex.gt-xs="50" fxFlex.gt-md="33">
+              <button mat-raised-button color="primary" routerLink="/create-incident-form">Create</button>
+            </div>
+          </div>
+          <div class="fuse-widget-front">
+
+            <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                <table class="simple">
+
+                    <thead>
+                      <tr>
+                        <th scope="col">Form No.</th>
+                        <th scope="col">Name</th>
+                        <!-- <th scope="col">Criteria</th> -->
+                        <th scope="col">Type</th>
+                        <!-- <th scope="col">Frequency</th> -->
+                        <th scope="col">Category</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Modify Date</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>USA001</td>
+                        <td>CHW site Incident </td>
+                        <!-- <td>Yes/No </td> -->
+                        <td>Incident</td>
+                        <!-- <td>Weekly</td> -->
+                        <td>Cleaning inspection</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>13-05-2020</td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/create-incident-form">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USA001</td>
+                        <td>CHW site Incident </td>
+                        <!-- <td>Yes/No </td> -->
+                        <td>Incident</td>
+                        <!-- <td>Weekly</td> -->
+                        <td>Cleaning inspection</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>13-05-2020</td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/create-incident-form">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>USA001</td>
+                        <td>CHW site Incident </td>
+                        <!-- <td>Yes/No </td> -->
+                        <td>Incident</td>
+                        <!-- <td>Weekly</td> -->
+                        <td>Cleaning inspection</td>
+                        <td><span class="bg-primary">Enable</span></td>
+                        <td>13-05-2020</td>
+                        <td>
+                            <button mat-icon-button color="primary" routerLink="/create-incident-form">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        </mat-card>
+  </div>

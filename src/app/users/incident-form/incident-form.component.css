@@ -1,0 +1,27 @@
+.audit_category{
+    width:100%;
+    float:left;
+    padding: 20px;
+}
+.bg-primary{
+    background-color: #DBB042 !important;
+}
+span{
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 3px;
+}
+.mat-form-field{
+    width: 100%;
+    /* margin-bottom: 15px; */
+}
+.overflow-auto{
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+.dash_table{
+    padding: 0 16px 0 5px;
+}
+/* .dash_table button{
+    top:18px;
+} */

@@ -1,0 +1,25 @@
+.audit{
+    width:100%;
+    float:left;
+    padding: 20px;
+}
+.bg-primary{
+    background-color: #DBB042 !important;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 3px;
+}
+.overflow-auto{
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+table th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 15px;
+    background: #DBB042;
+    color: #fff;
+}
+table td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 15px;
+}

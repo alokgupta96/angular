@@ -1,0 +1,79 @@
+<div class="audit_category">
+  <div class="pr-8 py-16 h-52" fxLayout="row" fxLayoutAlign="space-between center">
+    <h3>Sites</h3>
+    <button mat-raised-button color="primary" class="mb-3" routerLink="/create-site">Create</button>
+  </div>
+
+  <mat-card>
+
+    <div class="" fxLayout="row" fxLayoutAlign="space-between center">
+      <mat-form-field appearance="outline" class="width-25">
+        <mat-label>Select</mat-label>
+        <mat-select placeholder="select">
+          <mat-option>Select </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="onKey($event)" placeholder="Search">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="fuse-widget-front">
+      <p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000"></p-confirmDialog>
+      <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+        <table class="simple">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Staff</th>
+              <th scope="col">Customer</th>
+              <th scope="col">Audit / Incident Form</th>
+              <th scope="col">Created At</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+
+          <tbody *ngIf="siteList.length > 0">
+            <tr *ngFor="let site of siteList">
+              <td>{{site.siteName}}</td>
+              <td><span>{{site.staff.length}}</span></td>
+              <td>{{site.customerName}}</td>
+              <td> <span class="ml-20">{{site.auditformId.length}}</span></td>
+              <td>{{convertDate(site.date)}}</td>
+              <td *ngIf="site.status == 1" (click)="changeStatus(site, 0)"><span
+                  class="bg-disable enable_disbale_btn">Disable</span></td>
+              <td *ngIf="site.status == 0" (click)="changeStatus(site, 1)"><span
+                  class="bg-primary enable_disbale_btn">Enable</span></td>
+              <td>
+                <button mat-icon-button routerLink="/audit-form-scheduled">
+                  <mat-icon>insert_drive_file</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" (click)="editSite(site)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="deleteSite(site)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+          <tbody *ngIf="siteList.length == 0">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>No data found</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </mat-card>
+</div>

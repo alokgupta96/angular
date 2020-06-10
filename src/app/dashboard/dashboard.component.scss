@@ -1,0 +1,168 @@
+@import "src/@fuse/scss/fuse";
+.dash{
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+.mat-form-field{
+    width: 100%;
+    // margin: 15px;
+}
+.overflow-auto{
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+.card{
+    margin: 16px 10px;
+    padding: 16px 0px 0 ;
+}
+.card_field{
+    margin: 15px;
+}
+.width-50{
+    width:47%;
+    float:left;
+    margin: 15px;
+}
+.dashboard{
+    width:100%;
+    padding:1px 20px 20px;
+    margin-bottom: 20px;
+}
+.table{
+    width:100%;
+    border-collapse: collapse;
+}
+.table tr th{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 15px;
+    background-color: #f1f1f196;
+}
+.table tr td{
+    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding: 15px;
+}
+.dash_table{
+    padding: 0 10px 16px;
+}
+.blue {
+    padding: 5px;
+}
+.yellow{
+    padding: 5px;
+}
+.green{
+    padding: 5px;
+}
+.red{
+    padding: 5px;
+}
+.staff{
+    padding: 0 10px 16px;
+}
+.border-line p{
+margin-bottom: 0;
+font-size: 12px;
+font-weight: bolder;
+}
+.name_cunt{
+    width:18%;
+    text-align: center;
+    float: left;
+    padding: 20px;
+    font-size: 20px;
+    color: #fff !important;
+    font-weight: bolder;
+    height: 78px;
+}
+.count_name{
+    padding: 10px 8px;
+    width: 80%;
+    float: left;
+}
+.count_name p{
+    margin: 0;
+}
+.staff .mat-card{
+    width: 100%;
+    float: left;
+}
+#dashboard-analytics {
+
+    .main-widget {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    .content {
+        display: flex;
+        flex: 1 1 auto;
+        padding: 32px;
+        min-width: 0;
+
+        @include media-breakpoint('lt-lg') {
+            flex-direction: column;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            min-width: 0;
+
+            .widget {
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex: 0 0 auto;
+            width: 320px;
+            min-width: 320px;
+            max-width: 320px;
+
+            @include media-breakpoint('lt-lg') {
+                flex: 1 0 100%;
+                margin-top: 32px;
+                width: 100%;
+                min-width: 0;
+                max-width: none;
+            }
+
+            .fuse-card {
+
+                @include media-breakpoint('lt-lg') {
+                    width: 100%;
+                    min-width: 0;
+                    max-width: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+@media (max-width:767px){
+    .name_cunt{
+        width:40%;
+        
+    }
+    .count_name{
+        width: 60%;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+    .name_cunt{
+        width:30%;
+        
+    }
+    .count_name{
+        width: 70%;
+    }
+}
+// form css
+

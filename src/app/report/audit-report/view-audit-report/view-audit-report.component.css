@@ -1,0 +1,29 @@
+.audit{
+    width:100%;
+    float:left;
+    padding: 10px 20px;
+}
+.view_audit{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+.view_audit h4{
+    font-weight: 600;
+    line-height: 0;
+    text-transform: uppercase;
+}
+.view_audit p{
+    font-size: 13px;
+    color: #a0a0a0;
+    line-height: 10px;
+}
+.view_audit span{
+    background: #0d840d;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+.audit_form_que p{
+    color: #DBB042 !important;
+}

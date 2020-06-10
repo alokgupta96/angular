@@ -1,0 +1,42 @@
+<div class="audit">
+    <h2>Create Department</h2>
+    <mat-card>
+        <form name="departmentCreateForm" [formGroup]="departmentCreateForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder=" Name" formControlName="departmentName" required>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Training</mat-label>
+                    <input matInput placeholder="Training" formControlName="trainingId" required>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Training category</mat-label>
+                    <mat-select formControlName="categoryId">
+                      <mat-option value="option">Selact Training category</mat-option>
+                      <mat-option *ngFor="let training of trainings" value="{{training.name}}">
+                        {{training.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mt-3">
+            <button mat-raised-button color="primary" type="submit" (click) ="createDepartment()" [disabled]="departmentCreateForm.invalid">Save</button> &nbsp;&nbsp;
+            <button mat-raised-button routerLink="/department">Cancel</button>
+        </div>
+        </div>
+    </form>
+    </mat-card>
+</div>

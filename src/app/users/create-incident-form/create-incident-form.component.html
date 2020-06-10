@@ -1,0 +1,47 @@
+<div class="audit">
+    <h2>Incident Forms</h2>
+    <mat-card class="pb-8">   
+        <mat-tab-group>
+            <mat-tab label="General"> 
+                <div class="row pt-16">
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Form No.</mat-label>
+                            <input matInput placeholder="Form No.">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Name">
+                        </mat-form-field>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>category</mat-label>
+                            <mat-select>
+                              <mat-option value="option">Mobile App</mat-option>
+                              <mat-option value="option">WHS</mat-option>
+                              <mat-option value="option">systems</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-3 pb-8">
+                    <button mat-raised-button color="primary" routerLink="/">Next</button> &nbsp;&nbsp;
+                    <button mat-raised-button routerLink="/audit-form-table">Cancel</button>
+                </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Questions"> 
+                <div class=" no_data">
+                    <p> No data available</p>
+                 </div> 
+            </mat-tab>
+          </mat-tab-group>
+    </mat-card>
+</div>

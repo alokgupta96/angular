@@ -1,0 +1,76 @@
+<div class="audit_category">
+  <div class="pr-8 py-16 h-52" fxLayout="row"
+  fxLayoutAlign="space-between center">
+  <h3>Staff</h3>
+  <button mat-raised-button color="primary" class="mb-3" routerLink="/staff-create">Create</button>
+  </div>
+      <mat-card>
+          <div class="d-flex justify-content-between">
+            <mat-form-field appearance="outline">
+              <mat-label>Search</mat-label>
+              <input matInput (keyup)="onKey($event)" placeholder="Search">
+              <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="fuse-widget-front">
+
+            <p-confirmDialog [style]="{width: '30vw'}" [baseZIndex]="10000">
+            </p-confirmDialog>
+            <div class="simple-table-container overflow-auto text-nowrap" ms-responsive-table>
+                <table class="simple">
+                    <thead>
+                      <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Designation</th>
+                        <!-- <th scope="col">Phone</th> -->
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                      </tr>
+                    </thead>
+
+                    <tbody *ngIf="staffList.length > 0">
+                      <tr *ngFor="let staff of staffList">
+                        <td>{{staff.firstName}}</td>
+                        <td>{{staff.lastName}}</td>
+                        <td>{{staff.email}}</td>
+                        <td>{{staff.userName}}</td>
+                        <td>{{staff.department}}</td>
+                        <td>{{staff.designation}}</td>
+                        <!-- <td>{{staff.phoneNumber}}</td> -->
+                        <td *ngIf="staff.status == 1" (click)="changeStatus(staff, 0)"><span
+                          class="bg-disable enable_disbale_btn">Disable</span></td>
+                      <td *ngIf="staff.status == 0" (click)="changeStatus(staff, 1)"><span
+                          class="bg-primary enable_disbale_btn">Enable</span></td>
+                     
+                        <td>
+                            <button mat-icon-button color="primary" (click)="staffEdit(staff)">
+                                <mat-icon>edit</mat-icon>
+                              </button>
+                              <button mat-icon-button color="warn" (click)="confirm2(staff)">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tbody *ngIf="staffList.length == 0">
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>No data found</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        
+      </mat-card>
+</div>

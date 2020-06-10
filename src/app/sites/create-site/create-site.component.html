@@ -1,0 +1,143 @@
+<div class="audit">
+  <h2>Sites</h2>
+
+  <mat-card class="pb-8">
+    <mat-tab-group>
+      <mat-tab label="General">
+        <form name="siteCreateForm" [formGroup]="siteCreateForm">
+          <div>
+
+            <div class="row pt-16">
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Enter site name</mat-label>
+                  <input matInput placeholder="Name" formControlName="siteName" required>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Select customer</mat-label>
+                  <mat-select formControlName="customerName" required>
+                    <mat-option *ngFor="let customer of customerList" [value]="customer">
+                      {{customer.firstName}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6">
+                <mat-form-field appearance="outline" class="select_site">
+                  <mat-label>Select Staff / Manager</mat-label>
+                  <mat-select multiple formControlName="staff" required>
+                    <mat-option *ngFor="let staff of staffList" [value]="staff">{{staff.firstName}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+            </div>
+
+            <div>
+              <mat-form-field appearance="outline">
+                <mat-label> Select form</mat-label>
+                <mat-select formControlName="form" (selectionChange)="onCustomerChange($event)" multiple required>
+                  <mat-option *ngFor="let form of formList" value="{{form}}">{{form}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div *ngIf="isAudit">
+
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label> Select Audit Form</mat-label>
+                  <mat-select formControlName="auditformId" multiple required>
+                    <mat-option *ngFor="let audit of auditList" value="{{audit}}">{{audit}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Start date</mat-label>
+                  <input matInput [matDatepicker]="picker" (click)="picker.open()" formControlName="startdate" required>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+            </div>
+
+            <div *ngIf="isIncident">
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Incident form</mat-label>
+                  <mat-select formControlName="incidentform" multiple required>
+                    <mat-option *ngFor="let topping of toppingList" value="{{topping}}">{{topping}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div *ngIf="isAuditIncient">
+
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label> Select Audit Form</mat-label>
+                  <mat-select formControlName="auditformId" multiple required>
+                    <mat-option *ngFor="let audit of auditList" value="{{audit}}">{{audit}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Start date</mat-label>
+                  <input matInput [matDatepicker]="picker" (click)="picker.open()" formControlName="startdate" required>
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+
+              <div>
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Incident form</mat-label>
+                  <mat-select formControlName="incidentform" multiple required>
+                    <mat-option *ngFor="let topping of toppingList" value="{{topping}}">{{topping}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 mt-3 pb-8">
+                <button mat-raised-button color="primary" (click)="createSite()"
+                  [disabled]="siteCreateForm.invalid">Next</button> &nbsp;&nbsp;
+                <button mat-raised-button routerLink="/sites">Cancel</button>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </mat-tab>
+
+      <mat-tab label="Contact Detalis">
+        <div class=" no_data">
+          <p> No data available</p>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Levels and Areas">
+        <div class=" no_data">
+          <p> No data available</p>
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+  </mat-card>
+
+</div>
